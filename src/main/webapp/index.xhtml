@@ -10,11 +10,11 @@
 	
 	<h:form method="post" enctype="multipart/form-data">
 	 <div>
-	   <h:label for="file">Choose file to upload</h:label>
-	   <h:inputFile id="file" value="#{uploadbean.file}"/>
+	   <h:outputLabel for="file">Choose file to upload</h:outputLabel>
+	   <h:inputFile id="file" value="#{uploadBean.file}" validator="#{uploadBean.validateFile}"/>
 	 </div>
 	 <div>
-	   <h:commandButton value="Upload" action="#{uploadbean.upload}"/>
+	   <h:commandButton value="Upload" action="#{uploadBean.upload}"/>
 	 </div>
 	</h:form>
 
