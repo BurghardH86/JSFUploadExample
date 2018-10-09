@@ -6,11 +6,17 @@
 <title>Upload Page</title>
 </head>
 <body>
-<f:view>
-		
+<f:view>	
 	
-	<h:outputText value="Test Text"/>
-	
+	<h:form method="post" enctype="multipart/form-data">
+	 <div>
+	   <h:label for="file">Choose file to upload</h:label>
+	   <h:inputFile id="file" value="#{uploadbean.file}"/>
+	 </div>
+	 <div>
+	   <h:commandButton value="Upload" action="#{uploadbean.upload}"/>
+	 </div>
+	</h:form>
 
 </f:view>
 </body>
