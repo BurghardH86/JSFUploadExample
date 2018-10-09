@@ -22,13 +22,30 @@ public class UploadBean {
 	@SuppressWarnings("unused")
 	private String fileContent;
 
-	@SuppressWarnings("resource")
-	public void upload() {
-		try {
-			fileContent = new Scanner(file.getInputStream()).useDelimiter("\\A").next();
-		} catch (IOException e) {
-			// Error handling
+	public String upload() throws IOException {
+//		try {
+//			fileContent = new Scanner(file.getInputStream()).useDelimiter("\\A").next();
+//		} catch (IOException e) {
+//			// Error handling
+//		}
+		file.write("C:\\TempFileDir\\" + getFilename(file));
+		return "success";
+	}	
+	
+	private static String getFilename(Part part) {
+		String substringOfFilename = null;
+		for (String elementOfHeader : part.getHeader("content-disposition").split(";")) {
+			if (elementOfHeader.trim().startsWith("filename")) {
+				int positionOfFilenameSubstring = elementOfHeader.indexOf('=') + 1;
+				substringOfFilename = elementOfHeader.substring(positionOfFilenameSubstring);
+				substringOfFilename = substringOfFilename.trim().replace("\"", "");
+				substringOfFilename = substringOfFilename.substring(substringOfFilename.lastIndexOf('/') + 1);
+				substringOfFilename = substringOfFilename.substring(substringOfFilename.lastIndexOf('\\') + 1);
+				return substringOfFilename;
+				
+			}
 		}
+		return substringOfFilename;
 	}
 
 	public Part getFile() {
