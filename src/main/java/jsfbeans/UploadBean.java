@@ -24,8 +24,9 @@ public class UploadBean {
 	private String fileContent;
 
 	public String upload() throws IOException {
-		UploadBeanModel uploadBeanModel = new UploadBeanModel(file);		
-		uploadBeanModel.writeFile();		
+		UploadBeanModel uploadBeanModel = new UploadBeanModel(file);
+		uploadBeanModel.writeFile();
+		uploadBeanModel.readPart(file);
 		return "success";
 	}		
 
