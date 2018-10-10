@@ -5,9 +5,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Success Page</title>
 </head>
-<h:body>
+<body>
+<H1>File Upload successful</H1>
 <f:view>
-	<h:outputText value="File Upload successful"/><br/>		
+	<h:outputText value="The STL file possess the following facets:"></h:outputText><br/>
+	<br/>	
+	<h:outputText value="#{uploadBean.facets}"></h:outputText>
 </f:view>
-</h:body>
+<body>
 </html>

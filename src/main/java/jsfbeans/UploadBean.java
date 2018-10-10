@@ -15,6 +15,12 @@ public class UploadBean {
 	
 	private Part file;
 	private UploadBeanModel uploadBeanModel;
+	private String facets;
+
+	public String getFacets() {
+		facets = uploadBeanModel.printFacetsString();
+		return facets;
+	}
 
 	public String upload() throws IOException {
 		uploadBeanModel = new UploadBeanModel(file);

@@ -116,4 +116,15 @@ public class UploadBeanModel {
 		}
 		return outputString;
 	}
+	
+	@SuppressWarnings("null")
+	public String[] printFacetsStringArr() {
+		String[] outputString = null;
+		FacetsStructure facet = new FacetsStructure();
+		for (int i = 0; i < facetsList.size(); i++) {
+			facet = (FacetsStructure) facetsList.get(i);
+			outputString[i] = facet.toString();
+		}
+		return outputString;
+	}
 }
