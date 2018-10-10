@@ -2,15 +2,9 @@ package jsfbeans;
 
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.faces.component.UIComponent;
-import javax.faces.context.FacesContext;
-import javax.faces.validator.ValidatorException;
 import javax.servlet.http.Part;
 
 //Controller class

@@ -13,6 +13,7 @@ import stloperation.*;
 
 import javax.servlet.http.Part;
 
+//Modell class
 public class UploadBeanModel {
 	private Part file;
 	private InputStream inputStream;	
@@ -37,8 +38,7 @@ public class UploadBeanModel {
 				substringOfFilename = substringOfFilename.trim().replace("\"", "");
 				substringOfFilename = substringOfFilename.substring(substringOfFilename.lastIndexOf('/') + 1);
 				substringOfFilename = substringOfFilename.substring(substringOfFilename.lastIndexOf('\\') + 1);
-				return substringOfFilename;
-				
+				return substringOfFilename;				
 			}
 		}
 		return substringOfFilename;
