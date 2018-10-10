@@ -46,10 +46,12 @@ public class UploadBeanModel {
 	
 	public void readPart(Part part) throws IOException {
 		String line = null;
+		String[] subLine = null;
+		
 		int counter = 1;
 		int vertexCounter = 0;
-		FacetsStructure facet = new FacetsStructure();
-		String[] subLine = null;
+		
+		FacetsStructure facet = new FacetsStructure();		
 		
 		try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, charset))) {	
 			while ((line = bufferedReader.readLine()) != null) {
@@ -94,7 +96,7 @@ public class UploadBeanModel {
 				}								
 			}			
 		}
-		printFacets();
+		//printFacets();
 	}
 	
 	public void printFacets() {
@@ -103,5 +105,15 @@ public class UploadBeanModel {
 			facet = (FacetsStructure) facetsList.get(i);
 			System.out.println(facet.toString());
 		}
-	}	
+	}
+	
+	public String printFacetsString() {
+		String outputString = "";
+		FacetsStructure facet = new FacetsStructure();
+		for (int i = 0; i < facetsList.size(); i++) {
+			facet = (FacetsStructure) facetsList.get(i);
+			outputString += facet.toString();
+		}
+		return outputString;
+	}
 }

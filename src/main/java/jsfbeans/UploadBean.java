@@ -14,15 +14,19 @@ import javax.servlet.http.Part;
 public class UploadBean {
 	
 	private Part file;
-	@SuppressWarnings("unused")
-	private String fileContent;
+	private UploadBeanModel uploadBeanModel;
 
 	public String upload() throws IOException {
-		UploadBeanModel uploadBeanModel = new UploadBeanModel(file);
+		uploadBeanModel = new UploadBeanModel(file);
 		//uploadBeanModel.writeFile();
 		uploadBeanModel.readPart(file);
 		return "success";
-	}		
+	}
+	
+	public String printFacets() {
+		
+		return uploadBeanModel.printFacetsString(); 
+	}
 
 	public Part getFile() {
 		return file;
