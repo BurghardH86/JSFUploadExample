@@ -51,4 +51,110 @@ public class FacetsStructure {
 		returnString += "]\n";
 		return returnString;		
 	}
+
+	public int getFacetNumber() {
+		return facetNumber;
+	}
+
+	public void setFacetNumber(int facetNumber) {
+		this.facetNumber = facetNumber;
+	}
+
+	public double getFacetNormalX() {
+		return facetNormalX;
+	}
+
+	public void setFacetNormalX(double facetNormalX) {
+		this.facetNormalX = facetNormalX;
+	}
+
+	public double getFacetNormalY() {
+		return facetNormalY;
+	}
+
+	public void setFacetNormalY(double facetNormalY) {
+		this.facetNormalY = facetNormalY;
+	}
+
+	public double getFacetNormalZ() {
+		return facetNormalZ;
+	}
+
+	public void setFacetNormalZ(double facetNormalZ) {
+		this.facetNormalZ = facetNormalZ;
+	}
+
+	public double getFacetFirstPointX() {
+		return facetFirstPointX;
+	}
+
+	public void setFacetFirstPointX(double facetFirstPointX) {
+		this.facetFirstPointX = facetFirstPointX;
+	}
+
+	public double getFacetFirstPointY() {
+		return facetFirstPointY;
+	}
+
+	public void setFacetFirstPointY(double facetFirstPointY) {
+		this.facetFirstPointY = facetFirstPointY;
+	}
+
+	public double getFacetFirstPointZ() {
+		return facetFirstPointZ;
+	}
+
+	public void setFacetFirstPointZ(double facetFirstPointZ) {
+		this.facetFirstPointZ = facetFirstPointZ;
+	}
+
+	public double getFacetSecondPointX() {
+		return facetSecondPointX;
+	}
+
+	public void setFacetSecondPointX(double facetSecondPointX) {
+		this.facetSecondPointX = facetSecondPointX;
+	}
+
+	public double getFacetSecondPointY() {
+		return facetSecondPointY;
+	}
+
+	public void setFacetSecondPointY(double facetSecondPointY) {
+		this.facetSecondPointY = facetSecondPointY;
+	}
+
+	public double getFacetSecondPointZ() {
+		return facetSecondPointZ;
+	}
+
+	public void setFacetSecondPointZ(double facetSecondPointZ) {
+		this.facetSecondPointZ = facetSecondPointZ;
+	}
+
+	public double getFacetThirdPointX() {
+		return facetThirdPointX;
+	}
+
+	public void setFacetThirdPointX(double facetThirdPointX) {
+		this.facetThirdPointX = facetThirdPointX;
+	}
+
+	public double getFacetThirdPointY() {
+		return facetThirdPointY;
+	}
+
+	public void setFacetThirdPointY(double facetThirdPointY) {
+		this.facetThirdPointY = facetThirdPointY;
+	}
+
+	public double getFacetThirdPointZ() {
+		return facetThirdPointZ;
+	}
+
+	public void setFacetThirdPointZ(double facetThirdPointZ) {
+		this.facetThirdPointZ = facetThirdPointZ;
+	}
+	
+	
 }

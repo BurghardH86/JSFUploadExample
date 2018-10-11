@@ -18,7 +18,7 @@
             </plugin>
         </plugins>
 
-        <finalName>jsfdemo</finalName>
+        <finalName>JSF-Upload-Example</finalName>
     </build>
 
     <dependencies>

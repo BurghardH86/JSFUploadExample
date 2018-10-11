@@ -17,6 +17,7 @@ import javax.servlet.http.Part;
 public class UploadBeanModel {
 	private Part file;
 	private InputStream inputStream;	
+
 	private Charset charset = StandardCharsets.US_ASCII;
 	private List<Object> facetsList = new ArrayList<Object>();
 	
@@ -115,16 +116,9 @@ public class UploadBeanModel {
 			outputString += facet.toString();
 		}
 		return outputString;
-	}
+	}	
 	
-	@SuppressWarnings("null")
-	public String[] printFacetsStringArr() {
-		String[] outputString = null;
-		FacetsStructure facet = new FacetsStructure();
-		for (int i = 0; i < facetsList.size(); i++) {
-			facet = (FacetsStructure) facetsList.get(i);
-			outputString[i] = facet.toString();
-		}
-		return outputString;
+	public List<Object> getFacetsList() {
+		return facetsList;
 	}
 }

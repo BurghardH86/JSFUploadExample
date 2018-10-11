@@ -4,13 +4,74 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Success Page</title>
+<link href="#{request.contextPath}/css/style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 <H1>File Upload successful</H1>
 <f:view>
 	<h:outputText value="The STL file possess the following facets:"></h:outputText><br/>
 	<br/>	
-	<h:outputText value="#{uploadBean.facets}"></h:outputText>
+	
+	<h:dataTable value="#{uploadBean.facetsDataModel}" var="facet" styleClass="facetTable" headerClass="facetHeader" rowClasses="facetTableOddRow, facetTableEvenRow">
+	
+	<h:column>
+	<f:facet name="header">FacetNo.</f:facet>
+	#{facet.facetNumber}	
+	</h:column>
+	
+	<h:column>
+	<f:facet name="header">NormalX</f:facet>
+	#{facet.facetNormalX}	
+	</h:column>	
+	<h:column>
+	<f:facet name="header">NormalY</f:facet>
+	#{facet.facetNormalY}	
+	</h:column>	
+	<h:column>
+	<f:facet name="header">NormalZ</f:facet>
+	#{facet.facetNormalZ}	
+	</h:column>
+	
+	<h:column>
+	<f:facet name="header">FirstX</f:facet>
+	#{facet.facetFirstPointX}	
+	</h:column>
+	<h:column>
+	<f:facet name="header">FirstY</f:facet>
+	#{facet.facetFirstPointY}	
+	</h:column>
+	<h:column>
+	<f:facet name="header">FirstZ</f:facet>
+	#{facet.facetFirstPointZ}	
+	</h:column>
+	
+	<h:column>
+	<f:facet name="header">SecondX</f:facet>
+	#{facet.facetSecondPointX}	
+	</h:column>
+	<h:column>
+	<f:facet name="header">SecondY</f:facet>
+	#{facet.facetSecondPointY}	
+	</h:column>
+	<h:column>
+	<f:facet name="header">SecondZ</f:facet>
+	#{facet.facetSecondPointZ}	
+	</h:column>
+	
+	<h:column>
+	<f:facet name="header">ThirdX</f:facet>
+	#{facet.facetThirdPointX}	
+	</h:column>
+	<h:column>
+	<f:facet name="header">ThirdY</f:facet>
+	#{facet.facetThirdPointY}	
+	</h:column>
+	<h:column>
+	<f:facet name="header">ThirdZ</f:facet>
+	#{facet.facetThirdPointZ}	
+	</h:column>
+	
+	</h:dataTable>
 </f:view>
-<body>
+</body>
 </html>
